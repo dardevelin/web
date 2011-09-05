@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/chriseppstein/compass.git
+  revision: b7f44a48d375e56433fd10699874dfb0ce8fd23e
+  specs:
+    compass (0.12.alpha.0.b7f44a4)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+
+GIT
   remote: git://github.com/plataformatec/devise
   revision: 1b5d0af8248cc8f3db4de66d66acbb6556a87354
   specs:
@@ -63,10 +72,6 @@ GEM
     chunky_png (1.2.1)
     client_side_validations (3.1.0)
     coderay (0.9.8)
-    compass (0.12.alpha.0)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
     crack (0.1.8)
     cucumber (1.0.2)
       builder (>= 2.1.2)
@@ -87,6 +92,8 @@ GEM
     escape_utils (0.2.3)
     eventmachine (0.12.10)
     excon (0.6.5)
+    execjs (1.2.4)
+      multi_json (~> 1.0)
     factory_girl (1.3.3)
     factory_girl_rails (1.0.1)
       factory_girl (~> 1.3)
@@ -292,6 +299,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    uglifier (1.0.3)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
     warden (1.0.5)
       rack (>= 1.0)
     xpath (0.1.4)
@@ -307,7 +317,7 @@ DEPENDENCIES
   carrierwave
   cells
   client_side_validations
-  compass (>= 0.12.alpha.0)
+  compass!
   crack
   cucumber-rails
   database_cleaner
@@ -353,3 +363,4 @@ DEPENDENCIES
   slim
   sqlite3
   taps
+  uglifier
