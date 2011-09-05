@@ -10,9 +10,9 @@ title
   meta name="keywords" content=keywords
 
 link rel="shortcut icon" href="http://codegram-web.s3.amazonaws.com/favicon.png"
-= include_stylesheets :common, :media => 'all'
-= include_stylesheets :print, :media => 'print'
-= include_javascripts :workspace
+= stylesheet_link_tag :application, :media => 'all'
+= stylesheet_link_tag :print, :media => 'print'
+= javascript_include_tag :application
 | <!--[if lt IE 9]>
 = javascript_include_tag 'html5'
 | <![endif]-->
