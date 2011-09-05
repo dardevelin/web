@@ -71,7 +71,7 @@
 		// we don't have to do anything if the browser supports placeholder
 		if(!opts.overrideSupport && $.support.placeholder)
 		    return this;
-			
+
         return this.each(function() {
             var $el = $(this);
 
@@ -82,7 +82,7 @@
             // we cannot do password fields, but supported browsers can
             if($el.is(':password'))
                 return;
-			
+
 			// Prevent values from being reapplied on refresh
 			if(opts.preventRefreshIssues)
 				$el.attr('autocomplete','off');
@@ -96,7 +96,7 @@
             });
             $el.bind('blur.placeholder', function(){
                 var $el = $(this);
-				
+
 				$el.removeClass(opts.focusClass);
 
                 if(this.value == '')
@@ -105,7 +105,7 @@
             });
 
             $el.triggerHandler('blur');
-			
+
 			// Prevent incorrect form values being posted
 			$el.parents('form').submit(function(){
 				$el.triggerHandler('focus.placeholder');
