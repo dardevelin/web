@@ -4,7 +4,7 @@ nav#tabs=render :partial => 'tabs'
 hr.pagination-separator
 #navigation=render :partial => 'project_navigation'
 
-=javascript_include_tag 'history.js', 'history.adapter.jquery.js'
+/*=javascript_include_tag 'history.js', 'history.adapter.jquery.js'*/
 
 javascript:
   if(!jQuery.browser.msie==true){
@@ -16,7 +16,7 @@ javascript:
       }
 
       History.Adapter.bind(window,'statechange',function(){
-        var State = History.getState(); 
+        var State = History.getState();
         $.get(State.url + '.js' + "?direction=" + direction, function(){}, 'script');
       });
     })(window);
