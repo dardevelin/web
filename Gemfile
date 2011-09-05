@@ -41,8 +41,9 @@ gem 'mini_magick'
 gem 'faker'
 
 gem 'sass-rails'
-gem 'compass', '>= 0.12.alpha.0'
+gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'jquery-rails'
+gem 'uglifier'
 
 group :development do
   gem 'sqlite3'
