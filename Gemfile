@@ -40,16 +40,14 @@ gem 'mini_magick'
 
 gem 'faker'
 
+gem 'sass-rails'
+gem 'compass', '>= 0.12.alpha.0'
+gem 'jquery-rails'
+
 group :development do
   gem 'sqlite3'
   gem 'heroku'
   gem 'taps'
-end
-
-group :assets do
-  gem 'sass-rails'
-  gem 'compass', '>= 0.12.alpha.0'
-  gem 'jquery-rails'
 end
 
 group :test, :development, :cucumber do
