@@ -1,5 +1,5 @@
 article.post.hentry
-  headergroup.post-header
+  hgroup.post-header
     h2.post-title.entry-title
       =post_link(post)
     h3.post-tagline
@@ -7,7 +7,7 @@ article.post.hentry
   span class="post-metadata"
     -if params[:action] == 'show'
       #rdbWrapper
-      javascript: 
+      javascript:
         (function() {
             var s     = document.getElementsByTagName('script')[0],
                 rdb   = document.createElement('script');
@@ -17,10 +17,10 @@ article.post.hentry
             s.parentNode.insertBefore(rdb, s);
         })();
     .author-line.byline.author.vcard
-      | posted by  
+      | posted by
       span.author.fn = link_to post.author_name, blog_user_path(post.author)
     .date-line
-      |  on 
+      |  on
       time.date.updated datetime=post.updated_at pubdate='' = post.created_at.to_s(:date)
   .post-body.entry-content
     = image_tag(post.picture.thumb.url, class: 'entry-content-asset') if post.picture?
