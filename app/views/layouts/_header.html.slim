@@ -15,10 +15,10 @@ meta name="google-site-verification" content="Voihpf3QKpeiyocsiMNm2zVib9zCXkQJ73
 meta name="google-site-verification" content="Voihpf3QKpeiyocsiMNm2zVib9zCXkQJ73v63f8TaT0"
 
 link rel="shortcut icon" href="http://codegram-web.s3.amazonaws.com/favicon.png"
-= include_stylesheets :common, :media => 'all'
-= include_stylesheets :print, :media => 'print'
-= include_javascripts :workspace
+= stylesheet_link_tag :application, :media => 'all'
+= stylesheet_link_tag :print, :media => 'print'
+= javascript_include_tag :application
 | <!--[if lt IE 9]>
-= include_javascripts 'ie'
+= javascript_include_tag 'ie'
 | <![endif]-->
 = csrf_meta_tag

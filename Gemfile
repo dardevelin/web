@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0'
+gem 'rails', '>= 3.1'
 gem 'arel'
 gem 'rack-cache'
 gem 'pg'
@@ -11,22 +11,18 @@ gem 'friendly_id'
 
 gem 'slim'
 
-gem "oa-oauth", '~> 0.2.0.beta5'
+gem "oa-oauth"
 gem 'devise', :git => 'git://github.com/plataformatec/devise'
 
 gem 'high_voltage'
-gem 'compass'
-gem 'jammit'
-gem 'jammit-s3'
-gem 'jquery-rails'
+
 gem 'mail_form'
 gem 'simple_form'
 gem 'simple-navigation'
 gem 'flash_messages_helper'
 gem 'cells'
 gem 'markdownizer'
-gem 'kaminari', '0.10.4'
-gem 'closure-compiler'
+gem 'kaminari'
 
 gem 'client_side_validations'
 
@@ -48,11 +44,16 @@ group :development do
   gem 'sqlite3'
   gem 'heroku'
   gem 'taps'
-  gem 'passenger'
+end
+
+group :assets do
+  gem 'sass-rails'
+  gem 'compass', '>= 0.12.alpha.0'
+  gem 'jquery-rails'
 end
 
 group :test, :development, :cucumber do
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '1.0.1'
 end
 
 group :test, :cucumber do
@@ -74,7 +75,4 @@ group :test, :cucumber do
   gem 'guard-cucumber'
   gem 'rb-fsevent'
   gem 'growl'
-  gem 'spork'
-  gem 'guard-spork'
-  gem 'akephalos', require: false
 end
