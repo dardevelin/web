@@ -4,6 +4,7 @@ gem 'rails', '>= 3.1'
 gem 'arel'
 gem 'rack-cache'
 gem 'pg', group: [:production]
+gem 'unicorn', group: [:production]
 
 gem 'inherited_resources'
 gem 'escape_utils'
