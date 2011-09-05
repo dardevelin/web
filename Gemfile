@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '>= 3.1'
 gem 'arel'
 gem 'rack-cache'
-gem 'pg'
+gem 'pg', group: [:production]
 
 gem 'inherited_resources'
 gem 'escape_utils'
