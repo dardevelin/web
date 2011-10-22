@@ -7,30 +7,6 @@ nav
 
 .vcard
   aside
-    h4=t '.call_us'
-    span.fn.hidden
-      span.given-name Codegram
-    span.tel 0034 937 872 194
-    br
-    | 0034 668 823 476
-  aside
-    .adr
-      h4=t '.visit_us'
-      span.street-address Pl. d’Aurora Bertrana
-      br
-      span.extended-address Office 19 (2nd floor)
-      br
-      span.postal-code 08228
-      span.locality Terrassa
-      br
-      span.region Barcelona
-      |  (
-      span.country-name Spain
-      | )
-      br
-    =link_to t('.see_map'), 'http://goo.gl/dIf4I'
-    =image_tag 'http://' + request.host_with_port + '/images/logo_hcard.png', :class => 'hidden photo'
-  aside
     h4=t '.contact_us'
     span.hidden.url http://codegram.com
     = link_to '<span class="email">info@codegram.com</span>'.html_safe, 'mailto:info@codegram.com'
