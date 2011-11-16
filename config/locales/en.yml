@@ -78,6 +78,7 @@ en:
       downloads: downloads
     show:
       customers: Some of our clients
+    see_project: See project
 
   helpers:
     submit:

@@ -19,10 +19,10 @@ section#home
         =link_to t('.check_out_services'), :controller => 'pages', :id => 'services', :action => 'show'
 
     section.right
-      h3=t('.recent_work') 
+      h3=t('.recent_work')
       figure.snapshot
         = render_cell :project, :latest
-        
+
       aside.more
         =link_to t('.explore_projects'), :controller => 'projects', :action => 'show'
   .row
@@ -40,7 +40,7 @@ section#home
       h3=t('.twitter')
       #tweets
     aside.more.right.twitter
-      a href='http://twitter.com/codegram' 
+      a href='http://twitter.com/codegram'
         =t('.follow_twitter')
 
 javascript:
