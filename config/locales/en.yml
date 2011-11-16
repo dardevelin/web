@@ -64,6 +64,7 @@ en:
   categories:
     products: Products
     open-source: Open Source
+    client: Client
 
   projects:
     project_navigation:
