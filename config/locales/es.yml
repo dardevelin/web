@@ -73,6 +73,7 @@ es:
       downloads: descargas
     show:
       customers: Algunos de nuestros clientes
+    see_project: Ver el proyecto
 
   services:
     development: Desarrollo
