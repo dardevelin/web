@@ -16,11 +16,10 @@ class ProjectsController < ApplicationController
 
   def validate_category!
     raise ActiveRecord::RecordNotFound unless WorkCategory.names.include?(params[:work_category_id])
-    raise ActiveRecord::RecordNotFound if params[:work_category_id] == 'client'
   end
 
   def load_categories
-    @categories = WorkCategory.all[1..2]
+    @categories = WorkCategory.all
     @active = params[:work_category_id]
   end
 
