@@ -59,6 +59,7 @@ es:
   categories:
     products: Productos
     open-source: Open source
+    client: Clientes
 
   projects:
     project_navigation:
