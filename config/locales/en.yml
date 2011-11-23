@@ -35,9 +35,14 @@ en:
   contact_forms:
     new:
       details: Contact details
+      company_info: Company info
+      vat_number: "VAT number: ESB65148900"
       address: Address
       see_map: See a map
       phone: Phone
+      address_floor: Office 19 (2nd floor)
+      phone_number: '0034 937 872 194'
+      mobile_number: '0034 668 823 476'
 
   layouts:
     main_sidebar:

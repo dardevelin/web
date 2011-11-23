@@ -25,9 +25,14 @@ es:
   contact_forms:
     new:
       details: Detalles de contacto
+      company_info: Información de empresa
+      vat_number: "B65148900"
       address: Dirección
       see_map: Ver un mapa
       phone: Teléfono
+      address_floor: Planta 2 Oficina 19
+      phone_number: '937 872 194'
+      mobile_number: '668 823 476'
 
   layouts:
     main_sidebar:
