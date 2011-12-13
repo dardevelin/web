@@ -3,13 +3,6 @@ CodegramWeb::Application.routes.draw do
 
   devise_for :users
 
-  # Admin sections
-  namespace :admin do
-    resources :posts
-    resources :projects
-    match '/' => 'dashboards#show', via: :get
-  end
-
   # Public sections
 
   ## Blog subdomain
