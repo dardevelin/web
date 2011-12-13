@@ -44,14 +44,10 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :services, t('menu.services'), url_for(:controller => '/pages', :id => 'services', :action => 'show')
     primary.item :work, t('menu.work'), url_for(:controller => '/projects', :action => 'show'), highlights_on: /\/work/
     primary.item :about, t('menu.about'), url_for(:controller => '/pages', :id => 'about', :action => 'show')
-    primary.item :contact, t('menu.contact'), new_contact_form_path 
+    primary.item :contact, t('menu.contact'), new_contact_form_path
     primary.item :blog, t('menu.blog'), "http://blog.#{request.host_with_port}" + blog_posts_path(:locale => nil)
 
-    primary.item :dashboard, 'Dashboard', admin_path, if: lambda { current_user } do |admin_nav|
-      admin_nav.auto_highlight = false
-      admin_nav.item :projects, 'Projects', admin_projects_path, highlights_on: /\/projects/
-      admin_nav.item :posts, 'Posts', admin_posts_path, highlights_on: /\/posts/
-    end
+    primary.item :dashboard, 'Dashboard', admin_dashboard_path, if: lambda { current_user }
 
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
