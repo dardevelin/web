@@ -1,14 +1,11 @@
-@font-face
-  font-family: Klavika
-  // src: asset_url("klavika-regular-webfont.eot", font)
-  // src: ('☺'), asset_url('klavika-regular-webfont.ttf', font) format("truetype")
-  src: asset_url('klavika-regular-webfont.ttf', font) format("truetype")
 
 @font-face
   font-family: Klavika
-  // src: asset_url('embed/klavika-medium-webfont.eot', font)
-  // src: local('☺'), asset_url('klavika-medium-webfont.ttf', font) format("truetype")
-  src: asset_url('klavika-medium-webfont.ttf', font) format("truetype")
+  src: inline-font-files('klavika-regular-webfont.woff', woff)
+
+@font-face
+  font-family: Klavika
+  src: inline-font-files('klavika-medium-webfont.woff', woff)
   font-weight: bold
 
 html body
