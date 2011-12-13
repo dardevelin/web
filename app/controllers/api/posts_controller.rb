@@ -6,7 +6,7 @@ class Api::PostsController < ApplicationController
   def create
     post = Post.new(params[:post])
     if post.save
-      head :created, location: admin_post_path(post)
+      head :created, location: blog_post_path(post)
     else
       head 400, { errors: post.errors.to_json }
     end
