@@ -1,0 +1,1 @@
+$.easing.bounce=function(a,b,c,d,e){var f=.1;return(b/=e/2)<1?d/2*b*b*(((f*=1.525)+1)*b-f)+c:d/2*((b-=2)*b*(((f*=1.525)+1)*b+f)+2)+c},$.easing.heavy_bounce=function(a,b,c,d,e){var f=.8;return(b/=e/2)<1?d/2*b*b*(((f*=1.525)+1)*b-f)+c:d/2*((b-=2)*b*(((f*=1.525)+1)*b+f)+2)+c},$(function(){$("input, textarea").placeholder()})
