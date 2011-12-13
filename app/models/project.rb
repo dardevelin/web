@@ -8,8 +8,6 @@ class Project < ActiveRecord::Base
   markdownize! :description, tab_width: 2, hierarchy: 1
   markdownize! :extended_description, tab_width: 2, hierarchy: 1
 
-  translates :description, :extended_description, :quote, :client_name, :rendered_description, :rendered_extended_description
-
   has_many :screenshots
   mount_uploader :screenshot, ScreenshotUploader
 
