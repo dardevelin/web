@@ -8,6 +8,7 @@ gem 'unicorn'
 gem 'inherited_resources'
 gem 'escape_utils'
 gem 'friendly_id'
+gem 'rack-cache'
 
 gem 'slim'
 
