@@ -7,6 +7,9 @@ class Post < ActiveRecord::Base
   paginates_per 5
 
   belongs_to :author, class_name: 'User'
+
+  delegate :name, to: :author, prefix: true
+
   mount_uploader :picture, PictureUploader
   has_friendly_id :title, use_slug: true
 

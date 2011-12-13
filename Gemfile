@@ -2,9 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '>= 3.1'
 gem 'arel'
-gem 'rack-cache'
-gem 'pg', group: [:production]
-gem 'unicorn', group: [:production]
+gem 'pg'
+gem 'unicorn'
 
 gem 'inherited_resources'
 gem 'escape_utils'
@@ -12,8 +11,9 @@ gem 'friendly_id'
 
 gem 'slim'
 
-gem "oa-oauth"
-gem 'devise', :git => 'git://github.com/plataformatec/devise'
+gem 'activeadmin', git: 'git://github.com/gregbell/active_admin.git'
+gem 'devise'
+gem 'meta_search',    '>= 1.1.0.pre'
 
 gem 'high_voltage'
 
@@ -50,6 +50,7 @@ group :development do
   gem 'sqlite3'
   gem 'heroku'
   gem 'taps'
+  gem 'foreman'
 end
 
 group :test, :development, :cucumber do
