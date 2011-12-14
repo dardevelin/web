@@ -176,7 +176,6 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
       term-ansicolor (~> 1.0.5)
-    high_voltage (1.0.1)
     hike (1.2.1)
     i18n (0.6.0)
     inherited_resources (1.2.2)
@@ -365,7 +364,6 @@ DEPENDENCIES
   guard-rspec
   guard-shell
   heroku
-  high_voltage
   inherited_resources
   jquery-rails
   kaminari
