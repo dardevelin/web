@@ -3,4 +3,4 @@ ul.tabs
     - @categories.each_with_index do |category, index|
       -classes = []
       - classes << 'active' if category.id == params[:work_category_id]
-      = link_to category.name, projects_path(category.id), class: classes.join, remote: true
+      = link_to category.name, projects_path(category.id), class: classes.join

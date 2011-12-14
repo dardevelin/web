@@ -7,20 +7,9 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.changefreq 'weekly'
   end
 
-  xml.url do
-    xml.loc 'http://' + request.host_with_port + '/es'
-    xml.priority 1.0
-    xml.changefreq 'weekly'
-  end
-
   ['/services', '/contact', '/about'].each do |url|
     xml.url do
       xml.loc 'http://' + request.host_with_port + url
-      xml.changefreq 'monthly'
-    end
-
-    xml.url do
-      xml.loc 'http://' + request.host_with_port + '/es' + url
       xml.changefreq 'monthly'
     end
 
@@ -32,22 +21,11 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.changefreq 'weekly'
   end
 
-  xml.url do
-    xml.loc 'http://' + request.host_with_port + '/es/work'
-    xml.priority 0.8
-    xml.changefreq 'weekly'
-  end
-
-  Project.all.each do |project|
+  WorkCategory.all.each do |category|
 
     xml.url do
-      xml.loc 'http://' + request.host_with_port + project_path(project.category, project, :locale => nil)
-      xml.changefreq 'never'
-    end
-
-    xml.url do
-      xml.loc 'http://' + request.host_with_port + project_path(project.category, project, :locale => 'es')
-      xml.changefreq 'never'
+      xml.loc 'http://' + request.host_with_port + projects_path(category)
+      xml.changefreq 'daily'
     end
 
   end
