@@ -2,6 +2,10 @@ class ContactFormsController < ApplicationController
 
   def new
     @contact_form = ContactForm.new
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def create

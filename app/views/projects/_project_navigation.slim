@@ -1,5 +1,5 @@
 nav.examples_nav
-  .prev 
+  .prev
     -if @previous
       =link_to t('.previous'), project_path(@previous.category, @previous.to_param, :locale => params[:locale]), :rel => 'no-follow', :'data-direction' => 'left'
     -else

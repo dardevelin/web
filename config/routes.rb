@@ -39,8 +39,7 @@ CodegramWeb::Application.routes.draw do
       :only => [:new, :create],
       :path_names => {:new => '/'}
 
-    resources :projects, :only =>[:show], :path => '/work/:work_category_id'
-    match '/work(/:work_category_id)', :controller => 'projects', :action => :show, work_category_id: 'products', via: :get, as: :work
+    resources :projects, :only =>[:index], :path => '/work/(:work_category_id)', defaults: {work_category_id: 'client'}
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
@@ -49,6 +48,8 @@ CodegramWeb::Application.routes.draw do
 
     match '/es' => redirect("/", status: 301)
     match '/es/*path' => redirect("/%{path}", status: 301)
+
+    match '/work/*category/*extra' => redirect("/work/%{category}", status: 301)
 
     match '*path' => 'errors#not_found'
   end

@@ -43,6 +43,7 @@ gem 'mini_magick'
 gem 'faker'
 
 gem 'sass-rails'
+gem 'coffee-rails'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'jquery-rails'
 gem 'uglifier'

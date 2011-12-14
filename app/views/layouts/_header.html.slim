@@ -1,8 +1,5 @@
 title
-  -if yield(:title).blank?
-    ="Codegram - Smart Web Apps"
-  -else
-    ="#{yield(:title)} - Codegram"
+  =title(yield(:title))
 
 -if !(description=yield(:meta_description)).blank?
   meta name="description" content=description

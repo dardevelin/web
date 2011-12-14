@@ -1,1 +1,4 @@
-<%=yield%>
+$("#content").html("<%=escape_javascript yield%>");
+$("#sidebar nav").html("<%=escape_javascript (render_navigation) %>");
+add_remote();
+document.title = "<%=escape_javascript title(yield(:title)).html_safe%>";
