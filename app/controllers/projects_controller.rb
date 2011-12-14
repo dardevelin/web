@@ -3,12 +3,11 @@ class ProjectsController < ApplicationController
   before_filter :validate_category!
   before_filter :load_categories
 
-  def show
+  def index
     @projects = Project.where(category: params[:work_category_id]).order('created_at DESC').all
-    @project = params[:id] ? @projects.detect{|project| project.to_param == params[:id]} : @projects.first
-    @index = @projects.index(@project) and begin
-      @previous = @projects[@index - 1] if @index > 0
-      @next = @projects[@index + 1] if @index <= @projects.length
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

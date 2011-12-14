@@ -1,13 +1,18 @@
 #sidebar
   z-index: 10
-  position: relative
+  position: absolute
+  top: 0px
+  bottom: 0px
+  left: 0px
   #sidebar-inner
     color: white
+    width: 220px
     padding-bottom: 20px
     // +text-shadow
     h1, h2, h3, h4, a
       color: white
       font-weight: bold
+    padding-bottom: 20px
   #sidebar-inner aside
     ul
       +no-bullets
@@ -40,7 +45,7 @@
           margin-top: 50px
         &.selected
           a
-            background-color: white 
+            background-color: white
             color: $codegram-color
             +text-shadow(none)
             &:hover
@@ -51,12 +56,12 @@
               color: white
             &.selected
               a
-                background-color: white 
+                background-color: white
                 color: $codegram-color
                 +text-shadow(none)
                 &:hover
                   font-weight: normal
-        &.sign_out 
+        &.sign_out
           margin-top: 20px
           a
             +button-codegram
@@ -76,7 +81,7 @@
           +transition(background-color, 0.2s)
   #github
     position: absolute
-    bottom: 0px
+    bottom: 20px
     width: 100%
     text-align: center
     padding-bottom: 15px

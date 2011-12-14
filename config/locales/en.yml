@@ -75,13 +75,13 @@ en:
     project_navigation:
       previous: Previous
       next: Next
-    projects:
+    project:
       visit_site: Visit project site
       what_we_did: What we did
       view_at_rubygems: View project at RubyGems
       source_at_github: View source at GitHub
       downloads: downloads
-    show:
+    index:
       customers: Some of our clients
     see_project: See project
 
