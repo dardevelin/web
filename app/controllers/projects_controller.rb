@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.where(category: params[:work_category_id]).order('created_at DESC').all
+    expires_in 3.hours, 'max-stale' => 5.hours, :public => true
     respond_to do |format|
       format.html
       format.js
