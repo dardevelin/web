@@ -21,10 +21,11 @@ article.project
       -if project.category != 'open-source'
         .visit-site
           =link_to t('.visit_site'), project.url, class: 'visit-site'
-  .snapshot
-    = big_screenshot_for(project)
-    -unless project.quote.blank?
-      .caption
-        blockquote = project.quote
-        .caption-author = project.client_name
+  -if project.screenshot?
+    .snapshot
+      = big_screenshot_for(project)
+      -unless project.quote.blank?
+        .caption
+          blockquote = project.quote
+          .caption-author = project.client_name
 hr
