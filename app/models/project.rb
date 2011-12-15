@@ -16,7 +16,7 @@ class Project < ActiveRecord::Base
   scope :open_source, where(category: 'open-source')
   scope :published, where(published: true)
   scope :promoted, published.where(promoted: true).order(arel_table[:created_at].desc)
-  scope :ordered, order(arel_table[:name].asc)
+  scope :ordered, order(arel_table[:title].asc)
 
   def self.update_downloads!
     open_source.each do |open_source_project|
