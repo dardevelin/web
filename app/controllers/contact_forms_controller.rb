@@ -2,6 +2,7 @@ class ContactFormsController < ApplicationController
 
   def new
     @contact_form = ContactForm.new
+    @contact_form.service = params[:service] if params[:service]
     respond_to do |format|
       format.js
       format.html

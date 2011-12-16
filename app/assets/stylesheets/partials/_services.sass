@@ -1,70 +1,63 @@
-#content section.service
-  position: relative
-  padding-bottom: 0px
-  overflow: auto
-  article
-    padding-bottom: 40px
-  h4
-    font-size: 1.3em
-    margin-bottom: 10px
-    font-family: Klavika, "Helvetica Neue", Helvetica, Arial
-  .links a
+@import "compass/css3/transition"
+
+$icon-width: 140px
+#services
+  ul.services
+    padding: 0px
+    margin: 0px
+    li
+      list-style-type: none
+      position: relative
+  .service
+    padding: 30px 0px
+    padding-right: 20px
+    +transition(all 0.3s)
+    .contact
+      float: right
+      a
+        +button-codegram
+    .description
+      margin-left: $icon-width
+    h2
+      margin: 0px
+      padding: 0px
+    &:hover
+      background-color: #f1f1f1
+      +transition(all 0.3s)
+      .icon
+        color: $codegram-color
+        +transition(all 0.3s)
+      hgroup
+        h3
+          +transition(all 0.3s)
+  .icon
+    color: #ddd
     position: absolute
-    bottom: 0px
-    +button-codegram
-
-  img
-    float: left
-    height: 120px
-    width: 120px
-    margin:
-      right: 10px
-    +transition(all 0.8s ease-in-out)
-    -webkit-opacity: 0.7
-
-  h4
-    +transition(all 1s)
-
-  article:hover
-    h4
-      +transition(all 0.8s ease-out)
-      color: $font-color - #444
-    img
-      +transition(all 0.8s ease-out)
-      -webkit-opacity: 1
-
-  article#webapplication
-    img
-
-    &:hover img
-      margin-top: -15px
-      margin-bottom: 15px
-
-  article#kickstart
-    img
-      -webkit-transform:  rotateZ(0deg) rotateY(0deg)
-    &:hover img
-      -webkit-transform:  rotateZ(20deg) rotateY(0deg)
-
-  article#training
-    img
-      -webkit-transform:  rotateX(0deg) rotateY(0deg)
-    &:hover img
-      -webkit-transform:  rotateX(360deg) rotateY(0deg)
-
-  article#rescuemission
-    img
-      -webkit-transform:  rotateZ(0deg)
-      +transition(all 0.8s ease-in-out)
-    &:hover img
-      -webkit-transform:  rotateZ(180deg)
-
-html.no-csstransitions
-  article#webapplication
-  &:hover img
-    margin-top: 0px
-    margin-bottom: 0px
-
-  h3
-    margin-top: 10px
+    top: 25px
+    left: 0px
+    font-family: Klavika, "Helvetica Neue", Helvetica, Arial
+    +transition(all 0.3s)
+    font-size: 8em
+    width: $icon-width
+    text-align: center
+  .pricing
+    strong
+      text-transform: uppercase
+      width: 120px
+      display: inline-block
+    top: 0px
+    font-size: 1.1em
+    .money
+      display: inline-block
+      color: #fff
+      background-color: $codegram-color
+      padding: 2px 5px
+  hgroup
     margin-bottom: 10px
+    h2
+      display: inline
+    h3
+      display: inline
+      color: lighten($font-color, 30%)
+      +transition(all 0.3s)
+      margin-left: 15px

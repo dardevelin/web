@@ -1,70 +1,50 @@
 -content_for :meta_description do
-  | Are you starting up a web-driven business? Are you working on a new awesome project and need consultancy or training? Are you stuck in the middle of your development process and having problems getting the work done?
-    We are a team of expert web developers specialized in Ruby on Rails and the Ruby ecosystem.
+  | Codegram services
 
 -content_for :title do
   | Services
 
-section.service#development
+section#services
   h1 Services
-  article.left#webapplication
-    h2 Web application
-    h3 We only build success.
-    =image_tag 'services/webapp.png', height: 120, width: 120
-    p
-      | We craft high-quality web applications combining scalable technologies with state-of-the-art frameworks such as
-      = link_to 'Ruby on Rails', 'http://rubyonrails.org'
-      | , with fancy front-ends powered by HTML5, CSS3 and JQuery, among others.
-    p
-      | Are you starting a
-      strong web-driven business
-      | ? Do you need an online sales platform to broaden your company's target? Or maybe you need a custom internal application for your company and want to stay away from slow legacy desktop apps?
-      = link_to 'Get in touch', new_contact_form_path
-      | .
+  ul.services
+    li.service
+      .icon
+        | ⚡
+      .description
+        hgroup
+          h2 Rush
+          h3 A working application prototype in 48-hours. Show your investors something they'll love.
+        p
+          | Did you come up with a <strong>brilliant idea</strong> and you need a <strong>fully-functional prototype</strong> to show to your investors? We can build it for you. We put our team at work so you can have a functional first <strong>MVP</strong> of your app ASAP &mdash; all in <strong>48 hours</strong>.
+        .pricing
+          span.money USD 20,000
+          |  for a 4-developer, 1-designer team
 
-  article.right#kickstart
-    h2 Kickstart
-    h3 We love baking express start-ups.
-    =image_tag 'services/kickstart.png', height: 120, width: 120
-    p
-      | We help you develop your MVP (Minimum Viable Product) to launch your product right away, benefiting from user feedback from day one. We also
-      strong help you hire
-      | your own development team, and train them about your product's internals. After your product's launch, we can also assist you extending the application according to the evolving needs of your userbase.
-    p
-      strong Lightning fast
-      | . From the first meeting to product launch in
-      strong 3 weeks
-      | tops (
-      =link_to 'we already did it in 48 hours', '/work/products/jamibia'
-      | !).
+    li.service
+      .icon
+        | ◱
+      .description
+        hgroup
+          h2 Kickstart
+          h3 From your start-up idea to a full-fledged, modern, scalable web application.
+        p
+          | So you are willing to release the <strong>next kick-ass app of the moment</strong> &mdash; but you need an <strong>awesome team</strong> to bring it to life. We assist you in the early planning stages, come up with the <strong>best possible architecture</strong>, design and build your entire product from scratch.
+        .pricing
+          span.money USD 12,000 / week
+          |  for a 2-developer, 1-designer team
 
-section.service#help
-  article.left#training
-    h2 Ruby on Rails Training
-    h3 We know our craft well.
-    =image_tag 'services/training.png', height: 120, width: 120
-    p
-      |  Your team can take advantage of it. We provide on-site training sessions on
-      = link_to 'everything we know', about_path
-      |  and practice on a daily basis. With us, your team will be able to explore and understand Ruby on Rails internals &mdash; they will get familiar with the Ruby software ecosystem and take advantage of it.
-    p
-      | We teach you how to
-      strong successfully integrate Agile Development
-      |  techniques into your work environment. We teach all you need to know to boost your developers' quality and efficiency by effectively integrating
-      strong Business Driven Development
-      | workflow into your day to day.
+    li.service
+      .icon
+        | ☌
+      .description
+        hgroup
+          h2 Code review
+          h3 Keep your app healthy &mdash; we'll find its weak spots and help you improve it.
 
-  article.right#rescuemission
-    h2 Rescue Mission
-    h3
-      | It all starts with
-      =link_to 'just a broken window.', 'http://en.wikipedia.org/wiki/Broken_windows_theory'
-    =image_tag 'services/rescue_mission.png', height: 120, width: 120
-    p
-      | Old legacy applications that have ended up slowly rotting, becoming unmaintainable, unusable, and dangerous. Even freshly started Rails projects lacking architectural perspective, which ended up becoming a real pain (and a
-      strong real cost
-      | ) to maintain and extend. All those could use some help.
-    p
-      | Working with you and your team, we spot weaknesses and code smells in your application and help you refactor it and
-      strong put it back onto the rails
-      | (no pun intended, we promise). Getting our hands dirty and re-engineering existing broken applications is no problem for us, so that your project can meet today's demands on quality and flexibility.
+        p
+          | You already have an <strong>amazing app</strong> in the wild but you're starting to feel the <strong>pains of the growth</strong>. We put our <strong>best men at work</strong> to find your app's <strong>weak spots</strong> and <strong>architecture flaws</strong>. We point it all out through <strong>GitHub</strong> in a comprehensive manner, providing examples and suggesting changes as needed.
+        .pricing
+          span.money USD 200 / hour
+          |  for a remote code review
+
+=render partial: 'layouts/contact'

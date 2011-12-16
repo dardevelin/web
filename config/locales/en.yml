@@ -92,23 +92,21 @@ en:
         create: Submit
 
   services:
-    development: Development
-    web_application: Web Application
+    rush: Rush
     kickstart: Kickstart
-    consultancy: Consultancy
-    training: Ruby on Rails training
-    rescue_mission: Rescue mission
+    code_review: Code review
   start_times:
     immediately: Immediately
     month: Within 1 month
     months: Within 3 months
-  budgets:
-    min: 'Less than 10.000 EUR'
-    medium: '10.000 to 25.000 EUR'
-    high: '25.000 to 50.000 EUR'
-    more: 'More than 50.000 EUR'
 
   simple_form:
+    labels:
+      name: Your name
+      email: A contact email
+      service: In what service are you interested in?
+      start_time: When do you plan to start?
+      message: A message for us
     placeholders:
       contact_form:
         name: Your name
@@ -118,4 +116,3 @@ en:
       contact_form:
         service: 'What service are you interested in?'
         start_time: 'When do you plan to start your project?'
-        budget: 'Please select an estimated budget'
