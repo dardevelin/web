@@ -4,7 +4,7 @@ $ ->
       circular: true
     ).autoscroll(
       autoplay: true
-      interval: 10000
+      interval: 5000
     ).navigator(
       navi: '.tweet_navi'
     )
