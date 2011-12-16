@@ -49,6 +49,7 @@ gem 'coffee-rails'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'jquery-rails'
 gem 'uglifier'
+gem 'fancybox-rails'
 
 group :development do
   gem 'sqlite3'
