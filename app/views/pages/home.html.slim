@@ -29,20 +29,21 @@ section#home
 
       aside.more
         =link_to t('.explore_projects'), :controller => 'projects', :action => 'index'
+  hr
   .row
     section.left.blog
       h3=t('.blog')
       =render_cell :blog, :home
-    aside.more.left.blog
-      a href="http://blog.#{request.host_with_port + blog_posts_path(:locale => nil)}"
-        =t(".read_blog")
+      aside.more.blog
+        a href="http://blog.#{request.host_with_port + blog_posts_path(:locale => nil)}"
+          =t(".read_blog")
 
     section.right.twitter
       h3=t('.twitter')
       #tweets
-    aside.more.right.twitter
-      a href='http://twitter.com/codegram'
-        =t('.follow_twitter')
+      aside.more.twitter
+        a href='http://twitter.com/codegram'
+          =t('.follow_twitter')
 
 javascript:
   $(function(){
@@ -50,7 +51,7 @@ javascript:
           query: 'codegram',
           join_text: false,
           avatar_size: 32,
-          count: 3,
+          count: 4,
           loading_text: "loading tweets..."
       });
   });

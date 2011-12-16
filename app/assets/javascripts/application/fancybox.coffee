@@ -1,3 +1,3 @@
 $ ->
-  $(".snapshot a").fancybox
+  $(".snapshot a.big").fancybox
     titlePosition: 'inside'

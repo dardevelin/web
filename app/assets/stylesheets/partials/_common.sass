@@ -1,3 +1,5 @@
+@import "compass/css3/box-sizing"
+
 html body a
   outline: none
   #content
@@ -12,21 +14,28 @@ nav.pagination
   display: block
   overflow: hidden
 
+#home
+  .left, .right
+    padding-bottom: 60px
+
 #content
   padding-top: 55px
   padding-bottom: 30px
   .row
-    padding-bottom: 40px
+    padding-bottom: 0px
     overflow: hidden
     position: relative
+  .left, .right
+    float: left
+    +box-sizing(border-box)
   .left
-    +column(6)
+    width: 50%
+    padding-right: 20px
   .right
-    +column(6,true)
+    width: 50%
   .separator
     height: 170px
-  aside.more
-    margin-top: 10px
+  .more
     a
       +button-codegram
 

@@ -31,11 +31,11 @@ class ScreenshotUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :big do
-    process :resize_to_fill => [715, 302]
+    process :resize_to_fill => [743, 302]
   end
 
   version :thumb do
-    process :resize_to_fill => [345, 171]
+    process :resize_to_fill => [370, 171]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
