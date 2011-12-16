@@ -3,13 +3,11 @@ hr
 #contact
   section#contact-form
     =simple_form_for @contact_form, :url => new_contact_form_path, :validate => true do |f|
-      =f.input :name, :label => false
-      =f.input :email, :as => :email, :label => false
-      =f.input :service, :label => false do
-        =f.select :service, grouped_options_for_select(@contact_form.class.localized_services), :prompt => t('simple_form.prompts.contact_form.service')
-      =f.input :start_time, :as => :select, :collection => @contact_form.class.localized_start_times, :prompt => t('simple_form.prompts.contact_form.start_time') , :label => false
-      =f.input :budget, :as => :select, :collection => @contact_form.class.localized_budgets,  :prompt => t('simple_form.prompts.contact_form.budget'), :label => false
-      =f.input :message, :as => :text, :label => false
+      =f.input :name
+      =f.input :email, :as => :email
+      =f.input :service, collection: @contact_form.class.localized_services, as: :select, prompt: t('simple_form.prompts.contact_form.service')
+      =f.input :start_time, :as => :select, :collection => @contact_form.class.localized_start_times, :prompt => t('simple_form.prompts.contact_form.start_time')
+      =f.input :message, :as => :text
       =f.submit
   aside#contact-details
     h2=t '.details'
