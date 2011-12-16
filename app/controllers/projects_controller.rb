@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.where(category: params[:work_category_id]).ordered.all
-    expires_in 3.hours, 'max-stale' => 5.hours, :public => true
+    expires_in 3.hours, 'max-stale' => 5.hours, :public => true if Rails.env.production?
     respond_to do |format|
       format.html
       format.js

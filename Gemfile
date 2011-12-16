@@ -5,12 +5,16 @@ gem 'arel'
 gem 'pg'
 gem 'unicorn'
 
+gem 'twitter'
+
 gem 'inherited_resources'
 gem 'escape_utils'
 gem 'friendly_id'
 gem 'rack-cache'
 
 gem 'slim'
+
+gem 'rails_autolink'
 
 gem 'activeadmin', git: 'git://github.com/gregbell/active_admin.git'
 gem 'devise'

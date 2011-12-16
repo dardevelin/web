@@ -9,21 +9,21 @@
     =image_tag 'slides/codegram_building.jpg'
     headergroup
       h2 Our workplace is enlightening
-      h3 We work in a nice, quiet environment
+      h2 We work in a nice, quiet environment
   li#contact_slide
     =image_tag 'slides/working_together.jpg'
     headergroup
       h2 We like to collaborate
-      h3 It's how the best solutions are born
+      h2 It's how the best solutions are born
 
 section#style
 
-  h2 Our style (The Codegram Way)
+  h1 Our style (The Codegram Way)
   p At Codegram we care about software. We are a passionate team of developers concerned about both quality and productivity. And we think developing software is fun when done properly.
   p Throughout our experience, the following tools and standards proved making our clients (and us) happier:
 
   article
-    h3 Code Quality
+    h2 Code Quality
     = image_tag 'about/quality.jpg', :height => 160, :width => 160, :class => 'right'
     p
      | The only constant is change and software needs to respond well to it. Thus, code quality is a must in our day to day. And we know 100% test coverage
@@ -40,7 +40,7 @@ section#style
      |  among our developers, we aim to deliver well-crafted, high quality software. Software that not only works now, but will be extensible and easily maintainable in the future.
 
   article
-    h3 Business Driven Development
+    h2 Business Driven Development
     = image_tag 'about/bdd.jpg', :height => 160, :width => 160, :class => 'left'
     p
       | What exactly does lead to a good software design? We believe in software driven by business value, the so-called
@@ -64,7 +64,7 @@ section#style
     p This leads both to a cleaner design and to less code. And less code is less error-prone software. Actually, we wish we could help you without writing a line of code.
 
   article
-    h3 Agile Development
+    h2 Agile Development
     = image_tag 'about/pivotal.jpg', :height => 160, :width => 160, :class => 'right'
     p We manage our projects together with the client. We don't believe in specification documents (in a broader sense, we don't even believe in paper). We don't believe in written requirements either &mdash; mainly because they don't exist.
     p
@@ -78,7 +78,7 @@ section#style
       = link_to 'user stories', 'http://cuke4ninja.com/sec_cucumber_jargon.html#N10135'
       | , which serve as documentation for the project.
 
-    h4 User Stories
+    h3 User Stories
     p
       | User stories are the main tool of translating your ideas into implementable features. You express your ideas in your own language &mdash; your
       '
@@ -87,7 +87,7 @@ section#style
     p This preliminary stage helps you define what you really expect from your project, and it also serves as a guideline for actual code and tests. Plus, these user stories become the project documentation, and since they are tightly related to the code, they are always up to date!
 
   article
-    h3 Pair Programming
+    h2 Pair Programming
     = image_tag 'about/pair.jpg', :height => 160, :width => 160, :class => 'left'
     p
       | We also borrowed some goodness from the
@@ -98,7 +98,7 @@ section#style
       | This technique is one of the main keys to well-crafted software. Two developers working together produce more reliable, higher quality code, in less time. Through continuous discussion and collaborative coding, better designs and implementations come up.
 
   article
-    h3 Giving back to the Open Source community
+    h2 Giving back to the Open Source community
     = image_tag 'about/opensource.jpg', :height => 160, :width => 160, :class => 'right'
     p We work in the edge of the Ruby software craftsmanship community, continuously revisiting our tools and practices according to both the evolving technology and market.
     p
@@ -115,108 +115,3 @@ section#style
       =link_to 'our github profile', 'http://github.com/codegram'
       |  (and fork some of them if you want!).
 
-hr
-
-h2 Founders
-
-article.founder
-  = image_tag 'founders/jj.jpg', :height => 150, :width => 225
-  h3 Josep Jaume Rey
-  h4
-    | Design-pattern driven
-    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
-    | &trade;
-  p Specialized in Rails and Ruby, he engineers and improves any application's architecture until there are no more design patterns left to apply. Secretly, he is also a ninja front-end developer, and loves Ajax and CSS3 transitions.
-  ul
-    li.twitter
-      =link_to '@josepjaume', 'http://twitter.com/josepjaume'
-    li.github
-      =link_to 'github.com/josepjaume', 'http://github.com/josepjaume'
-article.founder
-  = image_tag 'founders/oriol.jpg', :height => 150, :width => 225
-  h3 Oriol Gual
-  h4
-    | Rational-oriented
-    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
-    | &trade;
-  p Specialized in Rails and Ruby, he would even refactor software made by Chuck Norris &mdash; as long as it has a shiny green test suite. Also, he keeps the company's organization as solid as our software.
-  ul
-    li.twitter
-      =link_to '@oriolgual', 'http://twitter.com/oriolgual'
-    li.github
-      =link_to 'github.com/oriolgual', 'http://github.com/oriolgual'
-article.founder.last
-  = image_tag 'founders/txus.jpg', :height => 150, :width => 225
-  h3 Josep M. Bach (Txus)
-  h4
-    | Bytecode-optimized
-    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
-    | &trade;
-  p
-    | Rails and Ruby specialist, he is also a Vim and BDD evangelist, and won't let you deploy until everything is
-    '
-    =link_to 'leaf-green', 'http://twitter.com/#!/drnic/status/27778376826'
-    | . He's very active in the Ruby open source community &mdash; delivering a new gem every weekend.
-
-  ul
-    li.twitter
-      =link_to '@txustice', 'http://twitter.com/txustice'
-    li.github
-      =link_to 'github.com/txus', 'http://github.com/txus'
-
-hr
-
-h2 Team
-
-article.founder
-  = image_tag 'team/marc.jpg', :height => 150, :width => 225
-  h3 Marc Riera
-  h4
-    | Design-pattern driven
-    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
-    | &trade;
-  p
-    | He's the youngest of the team. Born in 1991, he's currently studying Computer Sciences at UAB. He's a very active and commited person. He's been learning at light-speed since he became part of Codegram at October 2010!
-  ul
-    li.twitter
-      =link_to '@mrc2407', 'http://twitter.com/mrc2407'
-    li.github
-      =link_to 'github.com/mrc2407', 'http://github.com/mrc2407'
-article.founder
-  = image_tag 'team/div.jpg', :height => 150, :width => 225
-  h3 Marc Divins
-  h4
-    | Rational-oriented
-    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
-    | &trade;
-  p After some years of organizing illegal robot fights in different factories, wanted to leave his past behind jumping to the Ruby and Rails world. We spect to get a good RC from him soon to cooperate in all incoming projects.
-  ul
-    li.twitter
-      =link_to '@mdivins', 'http://twitter.com/mdivins'
-    li.github
-      =link_to 'github.com/divins', 'http://github.com/divins'
-article.founder.last
-  = image_tag 'team/roger.jpg', :height => 150, :width => 225
-  h3 Roger Bacardit
-  h4
-    | Bytecode-optimized
-    = Faker::Company.catch_phrase.tap{|n| n[0] = n[0].downcase }
-    | &trade;
-  p
-    | Art director of Codegram since September 2010. He's a Graphic Design, Multimedia and Photography graduate of the UPC. He's also very passionate of the 3D world, CGI and architecture.
-
-  ul
-    li.twitter
-      =link_to '@ruxii', 'http://twitter.com/ruxii'
-    li.github
-      =link_to 'github.com/rogerbacardit', 'http://github.com/rogerbacardit'
-
-hr
-
-h2 Offices
-article#offices
-  p Our offices are placed in a nice and quiet environment. Come see us, we have great coffee!
-  ul
-    li= image_tag 'offices/chairs.jpg', :height => 150, :width => 225
-    li= image_tag 'offices/outside.jpg', :height => 150, :width => 225
-    li.last= image_tag 'offices/workspace.jpg', :height => 150, :width => 225

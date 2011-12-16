@@ -42,6 +42,7 @@ CodegramWeb::Application.routes.draw do
     resources :projects, :only =>[:index], :path => '/work/(:work_category_id)', defaults: {work_category_id: 'client'}
     match '/feed.atom' => redirect("http://blog.codegram.com/feed.atom", status: 301)
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
+    match '/team', :controller => 'pages', :action => :show, :id => 'team'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
     match '/sitemap.xml' => 'sitemaps#show'
     match '/what-we-do' => redirect('/services', status: 301)

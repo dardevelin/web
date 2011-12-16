@@ -1,0 +1,20 @@
+.items
+  -@tweets.each do |tweet|
+    .favorite_tweet
+      .body
+        = auto_link tweet.body.html_safe
+      .user
+        =link_to "http://twitter.com/#{tweet.user_screen_name}" do
+          -unless tweet.user_photo.blank?
+            .image
+              =image_tag tweet.user_photo
+          .name
+              = tweet.user_name
+              = " (@#{tweet.user_screen_name})"
+        -unless tweet.user_url.blank?
+          .url
+            =link_to tweet.user_url
+.tweet_navi
+  -@tweets.each do |tweet|
+    a href="#first" title=tweet.user_name
+      =image_tag tweet.user_photo

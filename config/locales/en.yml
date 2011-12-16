@@ -11,7 +11,8 @@ en:
   menu:
     home: Home
     services: Services
-    work: Clients & Work
+    work: Work
+    team: Team
     about: About us
     contact: Contact
     blog: Blog
@@ -27,9 +28,9 @@ en:
       check_out_services: Check out our services
       recent_work: Our recent work
       explore_projects: Explore our projects
-      blog: "Learn from our day-to-day"
+      blog: "Articles from our blog"
       read_blog: Read our blog
-      twitter: "What we're talking about"
+      twitter: "Our twitter timeline"
       follow_twitter: Follow us on Twitter
 
   contact_forms:
@@ -67,9 +68,9 @@ en:
         text: to achieve the best solution
 
   categories:
-    products: Products
-    open-source: Open Source
-    client: Client
+    products: Our products
+    open-source: Open source
+    client: Client work
 
   projects:
     project_navigation:

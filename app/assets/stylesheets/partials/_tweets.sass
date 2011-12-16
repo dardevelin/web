@@ -1,0 +1,54 @@
+#favorited_tweets
+  width: 715px
+  height: 300px
+  overflow: hidden
+  position: relative
+  .tweet_navi
+    position: absolute
+    top: 220px
+    right: 0px
+    z-index: 100
+    a
+      cursor: pointer
+      +opacity(0.6)
+      border: 2px solid #fff
+      float: left
+      &.active
+        +opacity(1)
+        border-color: $codegram-color
+      &:hover
+        +opacity(1)
+      img
+        height: 20px
+        width: 20px
+        display: block
+  .items
+    width: 9999em
+    position: absolute
+  .favorite_tweet
+    width: 715px
+    position: relative
+    float: left
+    overflow: hidden
+    padding-bottom: 85px
+    .body
+      +border-radius(10px 10px 0px 10px)
+      padding: 15px
+      background-color: #f7f7f7
+      margin-bottom: 15px
+      font-size: 1.2em
+    .user
+      height: 54px
+      position: absolute
+      bottom: 0px
+      right: 0px
+      margin-bottom: 30px
+      width: 100%
+      text-align: right
+      .name
+        padding-top: 2px
+      .image
+        float: right
+        margin-left: 15px
+      .url a
+        color: $font-color

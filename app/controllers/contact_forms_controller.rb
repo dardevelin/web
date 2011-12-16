@@ -6,7 +6,6 @@ class ContactFormsController < ApplicationController
       format.js
       format.html
     end
-    expires_in 3.hours, 'max-stale' => 5.hours, :public => true
   end
 
   def create
