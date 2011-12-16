@@ -18,6 +18,7 @@ ActiveAdmin.register Project do
       f.input :url
     end
     f.inputs "Metadata" do
+      f.input :published
       f.input :promoted
       f.input :created_at
     end
