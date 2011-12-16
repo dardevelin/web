@@ -19,9 +19,12 @@ $default-text-shadow-v-offset: -1px;
 $default-text-shadow-blur: 0;
 
 $default-box-shadow-color: $default-text-shadow-color + #999;
-$default-box-shadow-h-offset: $default-text-shadow-h-offset + 1px; 
+$default-box-shadow-h-offset: $default-text-shadow-h-offset + 1px;
 $default-box-shadow-v-offset: $default-text-shadow-v-offset;
 $default-box-shadow-blur: $default-text-shadow-blur;
 
 $font-color: #5f5f5f;
 $blueprint-font-size: 14px;
+
+$sidebar-width: 185px;
+$content-width: $blueprint-container-size - $sidebar-width - 30px;

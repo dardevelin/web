@@ -4,7 +4,7 @@
   top: 0px
   bottom: 0px
   left: 0px
-  width: 220px
+  width: $sidebar-width
   background-color: #fcfcfc
   #sidebar-inner
     position: absolute
@@ -28,15 +28,15 @@
     h4
       margin-bottom: 0px
     margin-bottom: 20px
-    a
+    a, a.link
       +inline-block
-      background-color: #fff
-      color: $codegram-color
-      padding: 0px 5px
+      color: #fff
       line-height: 1.8em
       margin-top: 6px
       text-decoration: none
       +text-shadow(none)
+      &.mail
+        margin-bottom: 5px
   #sidebar-inner nav
     padding-top: 255px
     padding-left: 20px
@@ -45,8 +45,6 @@
       +no-bullets
       padding: 0px
       li
-        &#contact
-          margin-top: 20px
         &#blog
           margin-top: 20px
         line-height: 2.3em

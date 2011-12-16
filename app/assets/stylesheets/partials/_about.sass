@@ -17,6 +17,10 @@
         margin-left: 15px
 
 #content .founder
+  padding-right: 10px
+  height: 480px
+  position: relative
+  margin-bottom: 20px
   h3
     margin-top: 10px
     margin-bottom: 5px
@@ -25,14 +29,17 @@
     font-weight: bold
     height: 30px
   ul
+    position: absolute
+    bottom: 0px
+    left: 0px
     +no-bullets
     padding: 0px
     li
       margin-top: 5px
 
-  +column(4)
-  &.last
-    +column(4,true)
+  width: 33%
+  +box-sizing(border-box)
+  float: left
 
 #offices
   ul

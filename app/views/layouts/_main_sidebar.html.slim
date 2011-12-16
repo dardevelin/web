@@ -1,12 +1,8 @@
 nav
   =render_navigation
 
-.vcard
-  aside
-    h4=t '.contact_us'
-    span.hidden.url http://codegram.com
-    = link_to '<span class="email">info@codegram.com</span>'.html_safe, 'mailto:info@codegram.com'
 aside
-  h4=t('.follow_us')
-  ul
-    li=link_to '@codegram', 'http://twitter.com/codegram'
+  .vcard
+    span.hidden.url http://codegram.com
+    = link_to '<span class="email">info@codegram.com</span>'.html_safe, 'mailto:info@codegram.com', class: 'mail'
+  =render partial: 'layouts/twitter'
