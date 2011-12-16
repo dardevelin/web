@@ -9,6 +9,10 @@ section#motto
   h3.tagline=t('.submotto')
 hr
 
+section#favorited_tweets
+  h2 What do people say about us?
+  =render_cell :favorited_tweets, :list
+
 section#home
   .row
     section.left
@@ -25,9 +29,6 @@ section#home
 
       aside.more
         =link_to t('.explore_projects'), :controller => 'projects', :action => 'index'
-  .row
-    .separator.left=image_tag 'separator1.jpg'
-    .separator.right=image_tag 'separator2.jpg'
   .row
     section.left.blog
       h3=t('.blog')

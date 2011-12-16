@@ -42,6 +42,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :home, t('menu.home'), url_for(:controller => '/pages', :id => 'home', :action => 'show')
     primary.item :services, t('menu.services'), url_for(:controller => '/pages', :id => 'services', :action => 'show')
+    primary.item :team, t('menu.team'), url_for(:controller => '/pages', :id => 'team', :action => 'show')
     primary.item :work, t('menu.work'), projects_path, highlights_on: /\/work/
     primary.item :about, t('menu.about'), url_for(:controller => '/pages', :id => 'about', :action => 'show')
     primary.item :contact, t('menu.contact'), new_contact_form_path

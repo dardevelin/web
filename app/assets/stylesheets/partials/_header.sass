@@ -1,8 +1,6 @@
 #sidebar
   #sidebar-inner
     background-color: $codegram-color
-    min-height: 100%
-    position: relative
 
 header#header
   position: absolute
@@ -23,8 +21,9 @@ header#header
     padding-left: 20px
     color: white
 
-#blog
+#blog #sidebar
   #sidebar-inner
+    top: 0px
     height: 260px
     header
       h2
@@ -38,9 +37,10 @@ header#header
           display: block
           background-color: #f2f2f2
           color: $codegram-color
-          padding-left: 30px
+          padding-left: 20px
           +text-shadow(none)
           text-decoration: none
+          width: 200px
           &:hover
             background-color: #eee
 
