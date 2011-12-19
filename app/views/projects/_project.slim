@@ -18,7 +18,7 @@ article.project
       -else
         h3=t '.what_we_did'
         = project.rendered_extended_description.to_s.html_safe
-      -if project.category != 'open-source'
+      -if project.category != 'open-source' && project.url.present?
         .visit-site
           =link_to t('.visit_site'), project.url, class: 'visit-site'
   -if project.screenshot?

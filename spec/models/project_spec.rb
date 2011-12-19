@@ -13,7 +13,6 @@ describe Project do
   end
   describe 'validations' do
     it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:url) }
     it { should validate_presence_of(:description) }
     it { should validate_presence_of(:extended_description) }
 
