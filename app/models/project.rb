@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
 
   after_create :update_downloads!, if: :open_source?
 
-  validates :title, :url, :description, :extended_description, :category, presence: true
+  validates :title, :description, :extended_description, :category, presence: true
   validates :category, inclusion: WorkCategory.names
 
   markdownize! :description, tab_width: 2, hierarchy: 1
