@@ -1,6 +1,7 @@
 @import "compass/css3/transition"
 
-$icon-width: 140px
+$icon-width: 180px
+$transition-duration: 0.6s
 #services
   ul.services
     padding: 0px
@@ -11,11 +12,12 @@ $icon-width: 140px
   .service
     padding: 30px 0px
     padding-right: 20px
-    +transition(all 0.3s)
+    +transition(all $transition-duration)
     .contact
       float: right
-      a
-        +button-codegram
+      line-height: 26px
+      +opacity(0)
+      +single-transition(opacity, $transition-duration)
     .description
       margin-left: $icon-width
     h2
@@ -23,23 +25,41 @@ $icon-width: 140px
       padding: 0px
     &:hover
       background-color: #f1f1f1
-      +transition(all 0.3s)
-      .icon
-        color: $codegram-color
-        +transition(all 0.3s)
+      +transition(all $transition-duration)
+      .icon .active
+        +opacity(1)
+        +single-transition(opacity, $transition-duration)
       hgroup
         h3
-          +transition(all 0.3s)
+          +transition(all $transition-duration)
+      .contact
+        +opacity(1)
+        +single-transition(opacity, $transition-duration)
   .icon
-    color: #ddd
-    position: absolute
-    top: 25px
-    left: 0px
-    font-family: Klavika, "Helvetica Neue", Helvetica, Arial
-    +transition(all 0.3s)
-    font-size: 8em
-    width: $icon-width
-    text-align: center
+    &, .active
+      position: absolute
+      top: 0px
+      left: 0px
+      width: $icon-width
+      bottom: 0px
+      background-position: center
+      background-repeat: no-repeat
+    .active
+      +opacity(0)
+      +single-transition(opacity, $transition-duration)
+    &#rush
+      background-image: image_url('services/rush_grey.png')
+      .active
+        background-image: image_url('services/rush_red.png')
+
+    &#kickstart
+      background-image: image_url('services/kickstart_grey.png')
+      .active
+        background-image: image_url('services/kickstart_red.png')
+    &#code-review
+      background-image: image_url('services/code_review_grey.png')
+      .active
+        background-image: image_url('services/code_review_red.png')
   .pricing
     strong
       text-transform: uppercase
