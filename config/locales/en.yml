@@ -23,9 +23,9 @@ en:
       meta_keywords: web applications barcelona, web development, ruby on rails, mobile apps, html5, cucumber, bdd, test
       motto: We are a team of devoted developers.
       submotto: We build Ruby on Rails web applications emphasizing code quality and user experience.
-      what_can_we_do: What can we do for you?
-      what_text: "<p>Are you starting up a <strong>web-driven business</strong>? Are you working a new awesome project and need <strong>a great team</strong> to make it real? Do you need some <strong>advice</strong> on some <strong>technical decisions</strong> to take that will impact the future of your startup?</p><p>We are a team of expert web developers specializing in <em>Ruby on Rails</em> and the <em>Ruby</em> ecosystem.</p>"
-      check_out_services: Check out our services
+      what_can_we_do: Work with us
+      what_text: "<p>We help you bring your startup to life. We are a kick-ass team of expert web developers specializing in <strong>Ruby on Rails</strong> and <strong>Ruby</strong> applications. We work with you to carefully choose the right architecture and technology stack for your project. We train your team to make them even more awesome. <br/><strong>We want your startup to succeed.</strong>"
+      check_out_services: Read more about our services
       recent_work: Our recent work
       explore_projects: Explore our projects
       blog: "Articles from our blog"
