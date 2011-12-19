@@ -40,7 +40,7 @@ class ContactForm < MailForm::Base
     end
   end
 
-  attribute :service,    validate: localized_services.map { |services| services.last }.flatten
+  attribute :service,    validate: localized_services
   attribute :start_time, validate: localized_start_times
 
 end
