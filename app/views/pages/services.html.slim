@@ -2,14 +2,14 @@
   | Services
 
 -content_for :title do
-  | Hire us &mdash; we build on your ideas.
+  | Hire us - we build on your ideas.
 
 section#services
   h1 Services
   ul.services
     li.service
-      .icon
-        | ⚡
+      .icon#rush
+        .active
       .description
         hgroup
           h2 Rush
@@ -19,10 +19,12 @@ section#services
         .pricing
           span.money USD 20,000
           |  for a 4-developer, 1-designer team
+          .contact
+            =link_to "Get in touch", new_contact_form_path(service: "Rush")
 
     li.service
-      .icon
-        | ◱
+      .icon#kickstart
+        .active
       .description
         hgroup
           h2 Kickstart
@@ -32,10 +34,12 @@ section#services
         .pricing
           span.money USD 12,300 / week
           |  for a 2-developer, 1-designer team
+          .contact
+            =link_to "Get in touch", new_contact_form_path(service: "Kickstart")
 
     li.service
-      .icon
-        | ☌
+      .icon#code-review
+        .active
       .description
         hgroup
           h2 Code review
@@ -45,5 +49,7 @@ section#services
         .pricing
           span.money USD 200 / hour
           |  for remote code review
+          .contact
+            =link_to "Get in touch", new_contact_form_path(service: "Code review")
 
 =render partial: 'layouts/contact'
