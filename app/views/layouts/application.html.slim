@@ -3,16 +3,17 @@ html
   head
     =render :partial => 'layouts/header'
     link rel="apple-touch-icon" href="http://codegram-web.s3.amazonaws.com/images/codegram-apple-touch-icon.png"
-    javascript:
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-21318559-1']);
-      _gaq.push(['_trackPageview']);
+    -if Rails.env.production?
+      javascript:
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21318559-1']);
+        _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
   body
     #container
@@ -24,14 +25,15 @@ html
         #sidebar-inner
           =render :partial => 'layouts/main_sidebar'
           =render :partial => 'layouts/github_sidebar'
-    javascript:
-      var GoSquared={};
-      GoSquared.acct = "GSN-550092-C";
-      (function(w){
-          function gs(){
-              w._gstc_lt=+(new Date); var d=document;
-              var g = d.createElement("script"); g.type = "text/javascript"; g.async = true; g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-              var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(g, s);
-          }
-          w.addEventListener?w.addEventListener("load",gs,false):w.attachEvent("onload",gs);
-      })(window);
+    -if Rails.env.production?
+      javascript:
+        var GoSquared={};
+        GoSquared.acct = "GSN-550092-C";
+        (function(w){
+            function gs(){
+                w._gstc_lt=+(new Date); var d=document;
+                var g = d.createElement("script"); g.type = "text/javascript"; g.async = true; g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+                var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(g, s);
+            }
+            w.addEventListener?w.addEventListener("load",gs,false):w.attachEvent("onload",gs);
+        })(window);
