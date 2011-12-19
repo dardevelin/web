@@ -9,11 +9,7 @@ section#motto
   h3.tagline=t('.submotto')
 hr
 
-section#favorited_tweets
-  h2 What do people say about us?
-  =render_cell :favorited_tweets, :list
-
-section#home
+section.home
   .row
     section.left
       h3=t('.what_can_we_do')
@@ -29,6 +25,13 @@ section#home
 
       aside.more
         =link_to t('.explore_projects'), :controller => 'projects', :action => 'index'
+
+hr
+section#favorited_tweets
+  h2 What do people say about us?
+  =render_cell :favorited_tweets, :list
+
+section.home
   hr
   .row
     section.left.blog
