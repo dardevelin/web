@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     if params[:work_category_id] == 'open-source'
       @projects = @projects.by_downloads
     else
-      @projects = @projects.alphabetical
+      @projects = @projects.by_date
     end
     expires_in 3.hours, 'max-stale' => 5.hours, :public => true if Rails.env.production?
     respond_to do |format|
