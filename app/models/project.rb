@@ -17,7 +17,7 @@ class Project < ActiveRecord::Base
   scope :published, where(published: true)
   scope :promoted, published.where(promoted: true).order(arel_table[:created_at].desc)
 
-  scope :alphabetical, order(arel_table[:title].asc)
+  scope :by_date, order(arel_table[:created_at].desc)
 
   scope :by_downloads, order(arel_table[:downloads].desc)
 
