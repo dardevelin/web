@@ -56,6 +56,7 @@ group :development do
   gem 'heroku'
   gem 'taps'
   gem 'foreman'
+  gem 'smusher'
 end
 
 group :test, :development, :cucumber do
