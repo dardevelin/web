@@ -1,6 +1,8 @@
 title
   =title(yield(:title))
 
+meta content="http://#{request.host_with_port}/assets/logo.png" property="og:image"
+
 -if !(description=yield(:meta_description)).blank?
   meta name="description" content=description
 -if !(keywords=yield(:meta_keywords)).blank?
