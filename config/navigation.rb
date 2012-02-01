@@ -40,7 +40,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.
     #
-    primary.item :home, t('menu.home'), url_for(:controller => '/pages', :id => 'home', :action => 'show')
+    primary.item :home, t('menu.home'), url_for(:controller => '/pages', :id => 'home', :action => 'show', host: 'codegram.com')
     primary.item :services, t('menu.services'), url_for(:controller => '/pages', :id => 'services', :action => 'show')
     primary.item :team, t('menu.team'), url_for(:controller => '/pages', :id => 'team', :action => 'show')
     primary.item :work, t('menu.work'), projects_path, highlights_on: /\/work/
