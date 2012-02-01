@@ -11,7 +11,6 @@ CodegramWeb::Application.routes.draw do
     match '/es/2010/04/29/presenting-date-validator.html' => redirect('/2011/2/date-validation-with-rails-3', status: 301)
     namespace :blog, path: '/' do
       resources :users, only: :show
-      match '/sitemap.xml' => 'sitemaps#show'
       constraints format: :html do
         match '/' => 'posts#index', as: :blog, via: :get
         match '(/:year)(/:month)' => 'posts#index', as: :posts, via: :get
@@ -44,7 +43,6 @@ CodegramWeb::Application.routes.draw do
     match '/services', :controller => 'pages', :action => :show, :id => 'services'
     match '/team', :controller => 'pages', :action => :show, :id => 'team'
     match '/about', :controller => 'pages', :action => :show, :id => 'about'
-    match '/sitemap.xml' => 'sitemaps#show'
     match '/what-we-do' => redirect('/services', status: 301)
 
     match '/es' => redirect("/", status: 301)
@@ -60,6 +58,8 @@ CodegramWeb::Application.routes.draw do
   end
 
   root :to => "pages#show", :id => 'home'
+
+  match '/sitemap.xml' => 'sitemaps#show'
 
   match '*path' => redirect("http://codegram.com/%{path}", status: 301)
   match '/' => redirect('http://codegram.com/', status: 301)
