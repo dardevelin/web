@@ -1,0 +1,11 @@
+-content_for :meta_description do
+  | Estamos organizando una serie de workshops en Barcelona centrados en temáticas específicas, algunos para principiantes, y otros para desarrolladores más experimentados. Necesitamos un poco de feedback para saber cuáles son los temas que más interés despiertan.
+
+-content_for :title do
+  | Codegram Workshops
+
+-@locale = 'es'
+
+section#workshops
+  h1 Codegram Workshops
+  =render partial: 'workshops'

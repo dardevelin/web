@@ -6,7 +6,7 @@ title
 -if !(keywords=yield(:meta_keywords)).blank?
   meta name="keywords" content=keywords
 
-meta http-equiv="content-language" content=I18n.locale
+meta http-equiv="content-language" content=(@locale||I18n.locale)
 meta http-equiv="content-type" content="text/html;charset=UTF-8"
 meta name="google-site-verification" content="Voihpf3QKpeiyocsiMNm2zVib9zCXkQJ73v63f8TaT0"
 meta name="google-site-verification" content="Voihpf3QKpeiyocsiMNm2zVib9zCXkQJ73v63f8TaT0"
