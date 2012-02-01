@@ -55,6 +55,10 @@ CodegramWeb::Application.routes.draw do
     match '*path' => 'errors#not_found'
   end
 
+  constraints subdomain: 'workshops' do
+    match '/', :controller => 'pages', :action => :show, :id => 'workshops'
+  end
+
   root :to => "pages#show", :id => 'home'
 
   match '*path' => redirect("http://codegram.com/%{path}", status: 301)
