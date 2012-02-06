@@ -13,7 +13,7 @@
               = " (@#{tweet.user_screen_name})"
         -unless tweet.user_url.blank?
           .url
-            =link_to tweet.user_url
+            =link_to tweet.user_url, tweet.user_url
 .tweet_navi
   -@tweets.each do |tweet|
     a href="#first" title=tweet.user_name
