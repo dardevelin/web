@@ -47,6 +47,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :about, t('menu.about'), url_for(:controller => '/pages', :id => 'about', :action => 'show')
     primary.item :contact, t('menu.contact'), new_contact_form_path
     primary.item :blog, t('menu.blog'), blog_posts_url(host: 'blog.codegram.com')
+    primary.item :workshops, t('menu.workshops'), url_for(:controller => '/pages', :id => 'workshops', :action => 'show', host: 'workshops.codegram.com')
 
     primary.item :dashboard, 'Dashboard', admin_dashboard_path, if: lambda { current_user }
 
