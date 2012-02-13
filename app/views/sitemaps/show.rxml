@@ -27,6 +27,12 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.changefreq 'weekly'
   end
 
+  xml.url do
+    xml.loc 'http://talks.codegram.com/'
+    xml.priority 0.8
+    xml.changefreq 'weekly'
+  end
+
   WorkCategory.all.each do |category|
 
     xml.url do
