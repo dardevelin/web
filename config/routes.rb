@@ -23,7 +23,7 @@ CodegramWeb::Application.routes.draw do
   end
 
   constraints subdomain: 'www' do
-    match '*path' => redirect("http://codegram.com/%{path}", status: 301)
+    match '(*path)' => redirect("http://codegram.com/%{path}", status: 301)
   end
 
 
