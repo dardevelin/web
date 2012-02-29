@@ -22,6 +22,10 @@ CodegramWeb::Application.routes.draw do
     match '*path' => 'errors#not_found'
   end
 
+  constraints subdomain: 'www' do
+    match '*path' => redirect("http://codegram.com/%{path}", status: 301)
+  end
+
 
   ## Base subdomain
   constraints BaseSubdomain do
