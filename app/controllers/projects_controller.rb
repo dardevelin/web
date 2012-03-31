@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
   def load_categories
     @categories = WorkCategory.all
     @active = params[:work_category_id]
+    @category = WorkCategory.find(@active)
   end
 
 end

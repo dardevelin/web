@@ -1,8 +1,5 @@
 -content_for :title do
-  -if params[:work_category_id]
-    =params[:work_category_id].titleize
-  -else
-    | Clients and Work
+  =@category.name
 h1 Work
 
 nav#tabs=render :partial => 'tabs'
