@@ -4,3 +4,8 @@ h1 Work
 
 nav#tabs=render :partial => 'tabs'
 #projects=render :partial => 'project', collection: @projects
+#customers
+  h2 Other clients that trust us
+  ul
+    -Customer.all.each do |customer, url|
+      li=link_to customer, url
