@@ -19,6 +19,10 @@ module WorkCategory
         OpenStruct.new({ name: I18n.t("categories.#{category}"), id: category })
       end
     end
+
+    def find(id)
+      all.find{|c| c.id == id}
+    end
   end
 
 end

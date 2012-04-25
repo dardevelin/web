@@ -1,3 +1,5 @@
+-content_for :title do
+  | Our Team
 h1 Team
 
 article.founder
@@ -7,9 +9,9 @@ article.founder
   p Specialized in Rails and Ruby, he engineers and improves any application's architecture until there are no more design patterns left to apply. He is also a ninja front-end developer &mdash; using JavaScript, CoffeeScript and CSS3 transitions, he keeps our interfaces as smooth as our backend code.
   ul
     li.twitter
-      =link_to '@josepjaume', 'http://twitter.com/josepjaume'
+      =link_to 'josepjaume', 'http://twitter.com/josepjaume', title: 'Josep Jaume Rey - Twitter'
     li.github
-      =link_to 'github.com/josepjaume', 'http://github.com/josepjaume'
+      =link_to 'josepjaume', 'http://github.com/josepjaume', title: 'Josep Jaume Rey - GitHub'
 article.founder
   = image_tag 'founders/oriol.jpg', :height => 150, :width => 225
   h3 Oriol Gual
@@ -17,9 +19,9 @@ article.founder
   p Specialized in Rails and Ruby, he would even refactor software made by Chuck Norris &mdash; as long as it has a shiny green test suite. Very strict in code reviews, he double-checks our code quality every chance he gets. Moreover, he keeps the company's internal organization as solid as our software.
   ul
     li.twitter
-      =link_to '@oriolgual', 'http://twitter.com/oriolgual'
+      =link_to 'oriolgual', 'http://twitter.com/oriolgual', title: 'Oriol Gual - Twitter'
     li.github
-      =link_to 'github.com/oriolgual', 'http://github.com/oriolgual'
+      =link_to 'oriolgual', 'http://github.com/oriolgual', title: 'Oriol Gual - GitHub'
 article.founder.last
   = image_tag 'founders/txus.jpg', :height => 150, :width => 225
   h3 Josep M. Bach (Txus)
@@ -32,9 +34,9 @@ article.founder.last
 
   ul
     li.twitter
-      =link_to '@txustice', 'http://twitter.com/txustice'
+      =link_to 'txustice', 'http://twitter.com/txustice', title: 'Josep M. Bach - Twitter'
     li.github
-      =link_to 'github.com/txus', 'http://github.com/txus'
+      =link_to 'txus', 'http://github.com/txus', title: 'Josep M. Bach - GitHub'
 
 
 article.founder
@@ -45,9 +47,9 @@ article.founder
     | The youngest member of the team. Currently studying Computer Science at UAB, he's a very active and commited person. He's been coding and learning at light-speed since he became part of Codegram in 2010. At nights, he becomes a secret game developer.
   ul
     li.twitter
-      =link_to '@mrcasals', 'http://twitter.com/mrcasals'
+      =link_to 'mrcasals', 'http://twitter.com/mrcasals', title: 'Marc Riera - Twitter'
     li.github
-      =link_to 'github.com/mrcasals', 'http://github.com/mrcasals'
+      =link_to 'mrcasals', 'http://github.com/mrcasals', title: 'Marc Riera - GitHub'
 article.founder
   = image_tag 'team/div.jpg', :height => 150, :width => 225
   h3 Marc Divins
@@ -56,9 +58,9 @@ article.founder
 
   ul
     li.twitter
-      =link_to '@mdivins', 'http://twitter.com/mdivins'
+      =link_to 'mdivins', 'http://twitter.com/mdivins', title: 'Marc Divins - Twitter'
     li.github
-      =link_to 'github.com/divins', 'http://github.com/divins'
+      =link_to 'divins', 'http://github.com/divins', title: 'Marc Divins - GitHub'
 article.founder.last
   = image_tag 'team/roger.jpg', :height => 150, :width => 225
   h3 Roger Bacardit
@@ -67,6 +69,6 @@ article.founder.last
     | Art director at Codegram since 2010. He's a Graphic Design, Multimedia and Photography graduate of the UPC. He's also very passionate of the 3D world, computer-generated imagery and architecture.
   ul
     li.twitter
-      =link_to '@ruxii', 'http://twitter.com/ruxii'
+      =link_to 'ruxii', 'http://twitter.com/ruxii', title: 'Roger Bacardit - Twitter'
     li.github
-      =link_to 'github.com/rogerbacardit', 'http://github.com/rogerbacardit'
+      =link_to 'rogerbacardit', 'http://github.com/rogerbacardit', title: 'Roger Bacardit - GitHub'
